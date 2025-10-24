@@ -240,7 +240,7 @@ GEM
       date
       stringio
     public_suffix (6.0.2)
-    puma (6.6.0)
+    puma (7.1.0)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
@@ -468,7 +468,7 @@ DEPENDENCIES
   parallel_tests (~> 4.3.0)
   pg (~> 1.5, >= 1.5.9)
   pre-commit
-  puma (~> 6.6)
+  puma (~> 7.1)
   rack-cors
   rails (~> 8.0, >= 8.0.2)
   rails_param (~> 1.3, >= 1.3.1)
