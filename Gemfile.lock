@@ -121,7 +121,7 @@ GEM
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
-    ethon (0.16.0)
+    ethon (0.17.0)
       ffi (>= 1.15.0)
     factory_bot (6.5.1)
       activesupport (>= 6.1.0)
@@ -147,9 +147,8 @@ GEM
     httplog (1.7.0)
       rack (>= 2.0)
       rainbow (>= 2.0.0)
-    hubspot-api-client (14.5.2)
+    hubspot-api-client (20.0.0)
       json (~> 2.1, >= 2.1.0)
-      require_all (~> 3.0.0)
       typhoeus (~> 1.4.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
@@ -165,7 +164,7 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    json (2.11.3)
+    json (2.15.1)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -299,7 +298,6 @@ GEM
     regexp_parser (2.10.0)
     reline (0.6.1)
       io-console (~> 0.5)
-    require_all (3.0.0)
     rexml (3.4.1)
     rollbar (3.6.2)
     rspec-core (3.13.3)
@@ -460,7 +458,7 @@ DEPENDENCIES
   factory_bot_rails (~> 6.2)
   fuubar
   httplog (~> 1.7)
-  hubspot-api-client (~> 14.3)
+  hubspot-api-client (~> 20.0)
   importmap-rails
   jbuilder
   kaminari (~> 1.2, >= 1.2.2)

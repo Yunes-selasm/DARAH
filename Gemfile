@@ -27,7 +27,7 @@ gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
 gem 'ransack', '~> 4.3'
 
-gem 'hubspot-api-client', '~> 14.3'
+gem 'hubspot-api-client', '~> 20.0'
 
 gem 'httplog', '~> 1.7'
 
