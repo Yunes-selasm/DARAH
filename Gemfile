@@ -25,7 +25,7 @@ gem 'rack-cors'
 
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
-gem 'ransack', '~> 4.3'
+gem 'ransack', '~> 4.4'
 
 gem 'hubspot-api-client', '~> 14.3'
 
