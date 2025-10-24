@@ -1,0 +1,74 @@
+<%# The container tag
+  - available local variables
+    current_page:  a page object for the currently displayed page
+    total_pages:   total number of pages
+    per_page:      number of items to fetch per page
+    remote:        data-remote
+    paginator:     the paginator that renders the pagination tags inside
+-%>
+<%
+=begin%>
+ <%= paginator.render do -%>
+  <nav class="pagination" role="navigation" aria-label="pager">
+    <%= first_page_tag unless current_page.first? %>
+    <%= prev_page_tag unless current_page.first? %>
+    <% each_page do |page| -%>
+      <% if page.display_tag? -%>
+        <%= page_tag page %>
+      <% elsif !page.was_truncated? -%>
+        <%= gap_tag %>
+      <% end -%>
+    <% end -%>
+    <% unless current_page.out_of_range? %>
+      <%= next_page_tag unless current_page.last? %>
+      <%= last_page_tag unless current_page.last? %>
+    <% end %>
+  </nav>
+<% end -%> 
+<%
+<%
+=begin%>
+ =end%> 
+<%
+=end%>
+
+
+
+<%# app/views/kaminari/_paginator.html.erb %>
+<% if @actions.total_pages > 1 %>
+  <div class="flex justify-center mt-6">
+    <nav class="flex space-x-2" aria-label="Pagination">
+
+      <%# Previous %>
+      <% if @actions.first_page? %>
+        <span class="relative inline-flex items-center px-4 py-2 text-sm text-blue-400 bg-blue-100 border border-blue-200 rounded-md cursor-not-allowed">
+          Previous
+        </span>
+      <% else %>
+        <%= link_to "Previous", url_for(page: @actions.prev_page), class: "relative inline-flex items-center px-4 py-2 text-sm bg-blue-500 hover:bg-blue-600 text-white font-semibold border border-blue-600 rounded-md transition duration-150 ease-in-out" %>
+      <% end %>
+
+      <%# Page Numbers %>
+      <% total_pages = @actions.total_pages %>
+      <% current_page = @actions.current_page %>
+      <% window = 2 %>
+      <% start_page = [current_page - window, 1].max %>
+      <% end_page = [current_page + window, total_pages].min %>
+
+      <% start_page.upto(end_page) do |page| %>
+        <% active = page == current_page %>
+        <%= link_to page, url_for(page: page), class: "relative inline-flex items-center px-4 py-2 text-sm font-semibold border rounded-md transition duration-150 ease-in-out #{active ? 'bg-blue-500 text-white border-blue-600' : 'bg-white text-blue-700 border-blue-300 hover:bg-blue-500 hover:text-white'}" %>
+      <% end %>
+
+      <%# Next %>
+      <% if @actions.last_page? %>
+        <span class="relative inline-flex items-center px-4 py-2 text-sm text-blue-400 bg-blue-100 border border-blue-200 rounded-md cursor-not-allowed">
+          Next
+        </span>
+      <% else %>
+        <%= link_to "Next", url_for(page: @actions.next_page), class: "relative inline-flex items-center px-4 py-2 text-sm bg-blue-500 hover:bg-blue-600 text-white font-semibold border border-blue-600 rounded-md transition duration-150 ease-in-out" %>
+      <% end %>
+
+    </nav>
+  </div>
+<% end %>
