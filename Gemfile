@@ -89,7 +89,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem 'database_cleaner'
-  gem 'factory_bot_rails', '~> 6.2'
+  gem 'factory_bot_rails', '~> 6.5'
   gem 'fuubar'
   gem 'shoulda-matchers' # ,'4.0.1'
   gem 'simplecov', require: false
