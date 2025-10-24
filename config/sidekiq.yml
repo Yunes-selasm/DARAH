@@ -1,0 +1,25 @@
+---
+:concurrency: 2
+dev:
+  :concurrency: 2
+production:
+  :concurrency: 20
+
+:queues:
+  - default
+  - low
+
+:queues:
+  - default
+  - [sync_to_hubspot, 1]
+  - low
+
+# :scheduler:
+#   :schedule:
+#     TransfersCreatorJob:
+#       cron: '0 0 25 * *'
+#       description: 'Create transfers for each gem per 25 day of month'
+#     PayoutCreatorJob:
+#       every: '0 0 28 * *'
+#       description: 'Create payouts for each gem per 28 day of month'
+

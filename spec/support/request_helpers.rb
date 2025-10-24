@@ -1,0 +1,31 @@
+def json_response
+  JSON.parse(response.body, symbolize_names: true).with_indifferent_access
+end
+
+def data_response
+  json_response[:data]
+end
+
+def error_response
+  json_response[:message]
+end
+
+def success_response
+  json_response[:success]
+end
+
+def message_response
+  json_response[:message]
+end
+
+def headers
+  { 'API-ACCESS-KEY' => AppConfig.api_accessor }
+end
+
+def admin_access_token(admin)
+  Jwt.encode({ id: admin.id, name: admin.name })
+end
+
+def gym_access_token(gym)
+  Jwt.encode(gym.slice(:id, :status, :name, :created_at, :updated_at))
+end
