@@ -79,7 +79,7 @@ group :development, :test do
   gem 'pre-commit', require: false
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', '~> 2.20', '>= 2.20.2'
+  gem 'rubocop-rails', '~> 2.33'
   gem 'rubocop-rake', require: false
   gem 'rubocop-rspec'
 end
