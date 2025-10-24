@@ -72,7 +72,7 @@ end
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'knapsack_pro', '~> 6.0', '>= 6.0.3'
-  gem 'parallel_tests', '~> 4.3.0'
+  gem 'parallel_tests', '~> 5.4.0'
   gem 'rspec-rails', '~> 6.0'
   gem 'rspec-retry', '~> 0.6.2'
 

@@ -223,7 +223,7 @@ GEM
     nokogiri (1.18.8-x86_64-linux-musl)
       racc (~> 1.4)
     parallel (1.27.0)
-    parallel_tests (4.3.0)
+    parallel_tests (5.4.0)
       parallel
     parser (3.3.8.0)
       ast (~> 2.4.1)
@@ -465,7 +465,7 @@ DEPENDENCIES
   jbuilder
   kaminari (~> 1.2, >= 1.2.2)
   knapsack_pro (~> 6.0, >= 6.0.3)
-  parallel_tests (~> 4.3.0)
+  parallel_tests (~> 5.4.0)
   pg (~> 1.5, >= 1.5.9)
   pre-commit
   puma (~> 6.6)
